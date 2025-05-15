@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="SerèneSource - Premium Spring Water from Pristine Sources">
   <title>SerèneSource - Premium Spring Water</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <!-- Navigation -->
@@ -120,9 +121,9 @@
     }
 
     body {
-      font-family: 'Arial', sans-serif;
+      font-family: 'Montserrat', sans-serif;
       color: #023E8A;
-      background-color: #E6F3FA;
+      background-color: #F5FBFF;
       line-height: 1.6;
     }
 
@@ -131,31 +132,35 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 20px;
+      padding: 1.5rem 2rem;
       background-color: #FFFFFF;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
       position: sticky;
       top: 0;
-      z-index: 100;
+      z-index: 1000;
     }
 
     .logo-img {
-      height: 50px;
+      height: 3rem;
+      transition: transform 0.3s ease;
+    }
+
+    .logo-img:hover {
+      transform: scale(1.05);
     }
 
     .nav-links {
       display: flex;
       list-style: none;
-    }
-
-    .nav-links li {
-      margin-left: 20px;
+      gap: 1.5rem;
     }
 
     .nav-links a {
       text-decoration: none;
       color: #0077B6;
-      font-weight: bold;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: color 0.3s ease;
     }
 
     .nav-links a:hover {
@@ -165,278 +170,348 @@
     .hamburger {
       display: none;
       flex-direction: column;
+      gap: 0.3rem;
       cursor: pointer;
     }
 
     .hamburger span {
-      width: 25px;
-      height: 3px;
+      width: 1.8rem;
+      height: 0.2rem;
       background-color: #0077B6;
-      margin: 2px 0;
+      transition: all 0.3s ease;
+    }
+
+    .hamburger.active span:nth-child(1) {
+      transform: rotate(45deg) translate(0.5rem, 0.5rem);
+    }
+
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(0.5rem, -0.5rem);
     }
 
     /* Hero Section */
     .hero {
-      height: 80vh;
-      background: url('assets/hero-bg.jpg') no-repeat center center/cover;
+      min-height: 100vh;
+      background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('assets/hero-bg.jpg') no-repeat center center/cover;
       display: flex;
       justify-content: center;
       align-items: center;
       text-align: center;
       color: #FFFFFF;
+      padding: 2rem;
     }
 
     .hero-content h1 {
-      font-size: 48px;
-      margin-bottom: 20px;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
     }
 
     .hero-content p {
-      font-size: 20px;
-      margin-bottom: 30px;
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+      max-width: 600px;
     }
 
     .cta-button {
-      padding: 15px 30px;
+      padding: 1rem 2rem;
       background-color: #0077B6;
       color: #FFFFFF;
       text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: background-color 0.3s ease, transform 0.2s ease;
     }
 
     .cta-button:hover {
       background-color: #90E0EF;
+      transform: translateY(-2px);
     }
 
     /* About Section */
     .about {
-      padding: 60px 20px;
+      padding: 5rem 2rem;
       text-align: center;
       background-color: #FFFFFF;
     }
 
     .about h2 {
-      font-size: 36px;
+      font-size: 2.5rem;
       color: #0077B6;
-      margin-bottom: 20px;
+      margin-bottom: 1.5rem;
     }
 
     .about p {
-      font-size: 18px;
-      max-width: 800px;
+      font-size: 1.1rem;
+      max-width: 700px;
       margin: 0 auto;
+      color: #34495E;
     }
 
     /* Products Section */
     .products {
-      padding: 60px 20px;
+      padding: 5rem 2rem;
       text-align: center;
+      background-color: #F5FBFF;
     }
 
     .products h2 {
-      font-size: 36px;
+      font-size: 2.5rem;
       color: #0077B6;
-      margin-bottom: 40px;
+      margin-bottom: 2.5rem;
     }
 
     .product-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
       max-width: 1200px;
       margin: 0 auto;
     }
 
     .product-card {
       background-color: #FFFFFF;
-      border-radius: 10px;
-      padding: 20px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .product-card:hover {
       transform: translateY(-5px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
     }
 
     .product-card img {
       width: 100%;
-      height: 200px;
+      height: 220px;
       object-fit: cover;
-      border-radius: 10px;
-      margin-bottom: 15px;
+      border-radius: 8px;
+      margin-bottom: 1rem;
     }
 
     .product-card h3 {
-      font-size: 24px;
-      margin-bottom: 10px;
+      font-size: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: #023E8A;
     }
 
     .product-card p {
-      font-size: 18px;
+      font-size: 1.2rem;
       color: #0077B6;
-      margin-bottom: 15px;
+      margin-bottom: 1rem;
     }
 
     .add-to-cart {
-      padding: 10px 20px;
+      padding: 0.75rem 1.5rem;
       background-color: #0077B6;
       color: #FFFFFF;
       border: none;
-      border-radius: 5px;
+      border-radius: 8px;
       cursor: pointer;
+      font-weight: 600;
+      transition: background-color 0.3s ease, transform 0.2s ease;
     }
 
     .add-to-cart:hover {
       background-color: #90E0EF;
+      transform: translateY(-2px);
     }
 
     /* Hydration Tips Section */
     .hydration {
-      padding: 60px 20px;
+      padding: 5rem 2rem;
       background-color: #FFFFFF;
       text-align: center;
     }
 
     .hydration h2 {
-      font-size: 36px;
+      font-size: 2.5rem;
       color: #0077B6;
-      margin-bottom: 20px;
+      margin-bottom: 1.5rem;
     }
 
     .hydration p {
-      font-size: 18px;
-      margin-bottom: 40px;
+      font-size: 1.1rem;
+      margin-bottom: 2.5rem;
+      color: #34495E;
     }
 
     .tips-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
       max-width: 1200px;
       margin: 0 auto;
     }
 
     .tip-card {
-      padding: 20px;
+      padding: 1.5rem;
       background-color: #E6F3FA;
-      border-radius: 10px;
+      border-radius: 12px;
+      transition: transform 0.3s ease;
+    }
+
+    .tip-card:hover {
+      transform: translateY(-5px);
     }
 
     .tip-card h3 {
-      font-size: 22px;
-      margin-bottom: 10px;
+      font-size: 1.4rem;
+      margin-bottom: 0.75rem;
+      color: #023E8A;
     }
 
     .tip-card p {
-      font-size: 16px;
+      font-size: 1rem;
+      color: #34495E;
     }
 
     /* Sustainability Section */
     .sustainability {
-      padding: 60px 20px;
+      padding: 5rem 2rem;
       text-align: center;
-      background-color: #90E0EF;
+      background: linear-gradient(135deg, #90E0EF 0%, #E6F3FA 100%);
     }
 
     .sustainability h2 {
-      font-size: 36px;
+      font-size: 2.5rem;
       color: #023E8A;
-      margin-bottom: 20px;
+      margin-bottom: 1.5rem;
     }
 
     .sustainability p {
-      font-size: 18px;
-      margin-bottom: 30px;
-      max-width: 800px;
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+      max-width: 700px;
       margin: 0 auto;
+      color: #34495E;
     }
 
     .learn-more {
-      padding: 15px 30px;
+      padding: 1rem 2rem;
       background-color: #0077B6;
       color: #FFFFFF;
       border: none;
-      border-radius: 5px;
+      border-radius: 8px;
       cursor: pointer;
+      font-weight: 600;
+      transition: background-color 0.3s ease, transform 0.2s ease;
     }
 
     .learn-more:hover {
       background-color: #FFFFFF;
       color: #0077B6;
+      transform: translateY(-2px);
     }
 
     /* Contact Section */
     .contact {
-      padding: 60px 20px;
+      padding: 5rem 2rem;
       text-align: center;
+      background-color: #FFFFFF;
     }
 
     .contact h2 {
-      font-size: 36px;
+      font-size: 2.5rem;
       color: #0077B6;
-      margin-bottom: 20px;
+      margin-bottom: 1.5rem;
     }
 
     #contact-form {
-      max-width: 600px;
+      max-width: 500px;
       margin: 0 auto;
       display: flex;
       flex-direction: column;
-      gap: 15px;
+      gap: 1rem;
     }
 
     #contact-form input,
     #contact-form textarea {
-      padding: 15px;
+      padding: 1rem;
       border: 1px solid #90E0EF;
-      border-radius: 5px;
-      font-size: 16px;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-family: 'Montserrat', sans-serif;
+      transition: border-color 0.3s ease;
+    }
+
+    #contact-form input:focus,
+    #contact-form textarea:focus {
+      border-color: #0077B6;
+      outline: none;
     }
 
     #contact-form textarea {
       resize: vertical;
-      min-height: 150px;
+      min-height: 120px;
     }
 
     #contact-form button {
-      padding: 15px;
+      padding: 1rem;
       background-color: #0077B6;
       color: #FFFFFF;
       border: none;
-      border-radius: 5px;
+      border-radius: 8px;
       cursor: pointer;
+      font-weight: 600;
+      transition: background-color 0.3s ease, transform 0.2s ease;
     }
 
     #contact-form button:hover {
       background-color: #90E0EF;
+      transform: translateY(-2px);
     }
 
     /* Footer */
     footer {
-      padding: 20px;
+      padding: 1.5rem;
       text-align: center;
       background-color: #023E8A;
       color: #FFFFFF;
+      font-size: 0.9rem;
     }
 
     /* Responsive Design */
+    @media (max-width: 1024px) {
+      .hero-content h1 {
+        font-size: 2.8rem;
+      }
+
+      .hero-content p {
+        font-size: 1.1rem;
+      }
+
+      .product-grid,
+      .tips-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      }
+    }
+
     @media (max-width: 768px) {
       .nav-links {
         display: none;
         flex-direction: column;
         position: absolute;
-        top: 70px;
+        top: 5rem;
         left: 0;
         width: 100%;
         background-color: #FFFFFF;
-        padding: 20px;
+        padding: 1.5rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       }
 
       .nav-links.active {
         display: flex;
+      }
+
+      .nav-links li {
+        margin: 0.5rem 0;
       }
 
       .hamburger {
@@ -444,16 +519,38 @@
       }
 
       .hero-content h1 {
-        font-size: 32px;
+        font-size: 2rem;
       }
 
       .hero-content p {
-        font-size: 16px;
+        font-size: 1rem;
       }
 
-      .product-grid,
-      .tips-grid {
-        grid-template-columns: 1fr;
+      .about h2,
+      .products h2,
+      .hydration h2,
+      .sustainability h2,
+      .contact h2 {
+        font-size: 2rem;
+      }
+
+      #contact-form {
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero {
+        padding: 1rem;
+      }
+
+      .cta-button {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+      }
+
+      .product-card img {
+        height: 180px;
       }
     }
   </style>
@@ -465,6 +562,7 @@
     const navLinks = document.querySelector('.nav-links');
 
     hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
       navLinks.classList.toggle('active');
     });
 
@@ -474,6 +572,7 @@
         e.preventDefault();
         const section = document.querySelector(this.getAttribute('href'));
         section.scrollIntoView({ behavior: 'smooth' });
+        hamburger.classList.remove('active');
         navLinks.classList.remove('active');
       });
     });
